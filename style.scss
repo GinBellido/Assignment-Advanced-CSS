@@ -1,0 +1,45 @@
+$background-color:  #c3cfe2;
+$footer-color: #686de0;
+$text-background: #fff;
+
+@mixin flexcenter{
+
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+}
+
+
+.grid-container {
+    display: grid;
+    width: 87vh;
+    height: 95vh;
+    margin-left: 25rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1.5fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .header { grid-area: 1 / 1 / 2 / 4; }
+    .footer { grid-area: 2 / 1 / 3 / 4; }
+
+    .grid-container{
+        box-shadow: 0 0 20px black;
+        border-radius: 20px;
+    }
+
+ body{
+        background: $background-color;
+    
+    }
+
+
+
+@import "./footer";
+
+@import "./header";
+
+

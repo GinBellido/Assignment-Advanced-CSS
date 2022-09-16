@@ -1,0 +1,35 @@
+.icon-linkedin {
+    @include icon-;
+    background-color: #007bb6;
+   
+
+  }
+    
+.icon-linkedin:hover {
+    @include icon-hover;
+  
+}
+
+.icon-linkedin span{
+    @include icon-span;
+}
+
+.icon-linkedin span:hover{
+    
+    @include icon-span-hover;
+    
+}
+
+
+.icon-linkedin a{
+    @include icon-a;
+}
+
+.icon-linkedin a:hover{
+    @include icon-a-hover;
+}
+
+.icon-linkedin i{
+    @include icon-i;
+}
+

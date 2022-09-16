@@ -1,0 +1,121 @@
+$background-color:  #c3cfe2;
+$radius: 5px;
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body{
+  height: 100vh;
+  background-color: $background-color;
+  margin: 2rem;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    gap:0.5rem;
+  
+}
+
+.card{
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  border-radius: $radius;
+   
+     &__img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 250ms ease-out;;
+     }
+
+     &__details{
+      position:absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(35, 35, 60);
+      backdrop-filter: blur(2px)brightness(1.3);
+      padding: 0.5rem;  
+      opacity: 0;
+      transition:opacity 350ms;
+      
+      button{
+        text-align: center;
+        position: relative;
+        top:1rem;
+        transition: top 350ms;
+
+      }
+     }
+
+     &:hover img{
+      transform:scale(1.1)
+     }
+
+     &:hover &__details{
+      opacity:1;
+     }
+
+     &:hover &__details button{
+      top:0;
+     }
+}
+
+
+
+
+@media (min-width:320px)  { 
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    gap:0.5rem;
+  
+           }
+
+ }
+
+ @media (min-width:600px)  {
+  
+  .gallery{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  gap:0.5rem;
+
+         }
+ }
+
+ @media (min-width:1281px) {
+
+  .gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    gap:0.5rem;
+  
+}
+  }

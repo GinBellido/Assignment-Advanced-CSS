@@ -1,0 +1,86 @@
+body{
+    background-color:  #c3cfe2 ;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    grid-template-areas: 
+    ". . ."
+    ". . box-container"
+    ". . ."; 
+
+}
+
+.box-container { grid-area: box-container;}
+
+
+.box-container{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    justify-content: center;
+    overflow-x: hidden;
+
+}
+
+.box-container a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    margin-right: -45%;
+    padding: 1px;
+    width: 300px;
+    height: 7%;
+    text-align: left;
+    transition: 1s;
+    transition-property: transform;
+
+}
+
+.box-container a:hover{
+    transform: translate(-230px, 0);
+
+}
+
+.box-container i{
+    margin-top: 3%;
+    margin-right: 2rem;
+    margin-left: 5%;
+    font-size: 30px;
+}
+
+.box-container a:nth-child(1) {
+    background-color: #e17b77;
+}
+
+.box-container a:nth-child(2) {
+    background-color: #00aced;
+}
+
+.box-container a:nth-child(3) {
+    background-color: #007bb6;
+}
+
+.box-container a:nth-child(4) {
+    background-color: #3b5998;
+    
+}
+
+.box-container a:nth-child(5) {
+    background-color: #333;
+ 
+}
+
